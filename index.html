@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
+
+    <title>COVID Mapper</title>
+    <style>
+        * {
+            padding: 0vh;
+            margin: 0vh;
+        }
+
+        #map {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id='map'></div>
+
+</body>
+
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW51am1vcmUiLCJhIjoiY2tkcGM1N3RyMDdzbjJxbXNxazVvMzd4biJ9.Ungl6nH-wAtnL0DlL_t6rw';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/dark-v10',
+        zoom: 1,
+        center: [0, 20]
+
+    });
+</script>
+
+<script src="index.js"></script>
+
+</html>
+
+<!-- 
+    Data Obtained from 
+ https://www.trackcorona.live/api/countries -->
